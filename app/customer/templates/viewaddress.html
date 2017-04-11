@@ -1,0 +1,35 @@
+<h1>View Address Information</h1>
+
+<table>
+<tr>
+	<td>addressid</td>
+	<td>{{address.addressid}}</td> 
+<tr>
+	<td>address1</td>
+	<td>{{address.address1}}</td>
+</tr>
+<tr>
+	<td>address2</td>
+	<td>{{address.address2}}</td>
+</tr>
+<tr>
+	<td>city</td>
+	<td>{{address.city}}</td>
+</tr>
+<tr>
+	<td>state</td>
+	<td>{{address.state}}</td>
+</tr>
+<tr>
+	<td>zipcode</td>
+	<td>{{address.zipcode}}</td>
+</tr>
+
+<td>
+			  
+	<p><a href="{{ url_for('customer.editaddress',addressid=address.addressid) }}">Edit</a></p>
+
+</td>
+
+
+</table>

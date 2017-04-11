@@ -1,0 +1,25 @@
+<h1>Address Information</h1>
+<form action="" method="post" name="address">
+	{{ form.hidden_tag() }}
+
+		{{ form.address1.label }}
+		{{ form.address1}}
+		<br>
+		{{ form.address2.label }}
+		{{ form.address2}}
+		<br>
+		{{ form.city.label}}
+		{{ form.city }}
+		<br>
+		{{ form.state.label }}
+		{{ form.state}}
+		<br>
+		{{ form.zipcode.label }}
+		{{ form.zipcode}}
+		<br>
+		<input type="submit" value="Submit">
+		<br>
+		
+		<br>
+
+</form>

@@ -1,0 +1,41 @@
+<h1>View Customer Information</h1>
+
+<table>
+<tr>
+	<td>custid</td>
+	<td>{{customer.custid}}</td> 
+</tr>
+<tr>
+	<td>firstname</td>
+	<td>{{customer.firstname}}</td>
+</tr>
+<tr>
+	<td>lastname</td>
+	<td>{{customer.lastname}}</td>
+</tr>
+<tr>
+	<td>gender</td>
+	<td>{{customer.gender}}</td>
+</tr>
+<td>
+	<a href="{{url_for('customer.editcustomer', custid = customer.custid) }}">Edit Customer</a>
+</td>
+</table>
+
+{% for address in addresses %}
+			<tr>
+				<td>{{ address.addressid}}</td>
+				<td>{{ address.address1 }}</td>
+				<td>{{ address.address2 }}</td>
+				<td>{{ address.city }}</td>
+				<td>{{ address.state }}</td>
+				<td>{{ address.zipcode }}</td>
+				<td><a href="{{ url_for('customer.editaddress', addressid = address.addressid) }}">Edit Address</a></td>
+			</tr>
+{% endfor %}
+
+<table>
+		<tr>
+		<td><a href="{{ url_for('customer.address',custid=customer.custid) }}">Add Address</a></td>
+		</tr>
+</table>
